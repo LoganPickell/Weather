@@ -2,19 +2,29 @@
 <html>
 <head>
     <title>Weather Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weather.css') }}">
 </head>
 <body>
-    <h1>Weather for {{ weather.city }}</h1>
-    <form action="/weather" method="GET">
-        <button type="submit">Get Weather</button>
-    </form>
-    {% if weather.error %}
-        <p>{{ weather.error }}</p>
-    {% else %}
-        <p>Temperature: {{ weather.temperature }}K</p>
-        <p>Description: {{ weather.description }}</p>
-        <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="{{ weather.description }}">
-    {% endif %}
-    <a href="/">Back</a>
+    <table>
+        <caption>Weather for {{ weather.city }}</caption>
+        <thead>
+            <tr>
+                <th>Current Temp (°F)</th>
+                <th>Min Temp (°F)</th>
+                <th>Max Temp (°F)</th>
+                <th>Description</th>
+                <th>Weather Icon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ weather.temperature }}</td>
+                <td>{{ weather.min_temperature }}</td>
+                <td>{{ weather.max_temperature }}</td>
+                <td>{{ weather.description }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Weather Icon"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

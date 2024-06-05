@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Scraper</title>
+    <title>Weather API</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
 </head>
 <body>
-    <h1>Enter City to Get Weather</h1>
+    <h1>Enter City or Zip Code to Get Weather</h1>
     <form action="/weather" method="post">
+        <input type="text" name="location" placeholder="Enter city or zip code">
         <button type="submit">Get Weather</button>
     </form>
 </body>
