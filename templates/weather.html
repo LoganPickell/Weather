@@ -2,29 +2,38 @@
 <html>
 <head>
     <title>Weather Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weather.css') }}">
 </head>
 <body>
-    <table>
-        <caption>Weather for {{ weather.city }}</caption>
-        <thead>
-            <tr>
-                <th>Current Temp (°F)</th>
-                <th>Min Temp (°F)</th>
-                <th>Max Temp (°F)</th>
-                <th>Description</th>
-                <th>Weather Icon</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ weather.temperature }}</td>
-                <td>{{ weather.min_temperature }}</td>
-                <td>{{ weather.max_temperature }}</td>
-                <td>{{ weather.description }}</td>
-                <td><img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Weather Icon"></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 weather-container">
+                <table class="table table-hover">
+                    <caption class="text-center">Weather for {{ weather.city }}</caption>
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Current Temp (°F)</th>
+                            <th>Min Temp (°F)</th>
+                            <th>Max Temp (°F)</th>
+                            <th>Description</th>
+                            <th>Weather Icon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ weather.temperature }}</td>
+                            <td>{{ weather.min_temperature }}</td>
+                            <td>{{ weather.max_temperature }}</td>
+                            <td>{{ weather.description }}</td>
+                            <td class="weather-icon"><img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Weather Icon"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

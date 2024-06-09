@@ -1,50 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    background-color: #975D00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='61.7' stroke-opacity='0.08' %3E%3Ccircle fill='%23975D00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23905707' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2389510e' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23824c12' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%237a4616' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23734018' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%236c3b1b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%2366351c' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%235f301e' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23582b1f' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23512620' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%234a2021' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23431b22' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%233c1623' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23351123' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%232e0c23' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23270724' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
 }
-
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: 20px auto;
+.weather-container {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-caption {
+.weather-table caption {
+    caption-side: top;
     font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-
-thead {
-    background-color: #007bff;
-    color: white;
-}
-
-thead th {
-    padding: 10px;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-    background-color: #ddd;
-}
-
-td, th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.weather-icon {
+.weather-icon img {
     width: 50px;
-    height: 50px;
-}
-
-.weather-description {
-    text-transform: capitalize;
 }
