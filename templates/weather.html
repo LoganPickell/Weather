@@ -13,6 +13,13 @@
                     <caption class="text-center">Weather for {{ weather.city }}</caption>
                     <thead class="table-dark">
                         <tr>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Sunrise</th>
+                            <th>Sunset</th>
+                            <th>Humidity (%)</th>
+                            <th>Cloudiness (%)</th>
+                            <th>Feels Like (°F)</th>
                             <th>Current Temp (°F)</th>
                             <th>Min Temp (°F)</th>
                             <th>Max Temp (°F)</th>
@@ -22,6 +29,13 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>{{ weather.city }}</td>
+                            <td>{{ weather.Country }}</td>
+                            <td>{{ weather.Sunrise }}</td>
+                            <td>{{ weather.Sunset }}</td>
+                            <td>{{ weather.Humidity }}</td>
+                            <td>{{ weather.Cloudiness }}</td>
+                            <td>{{ weather.Feels_Like }}</td>
                             <td>{{ weather.temperature }}</td>
                             <td>{{ weather.min_temperature }}</td>
                             <td>{{ weather.max_temperature }}</td>
