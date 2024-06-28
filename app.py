@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 from datetime import datetime
-import requests
+import requests, os
+import load_dotenv
 
 app = Flask(__name__)
-api_key = '184b9613da0fb982cf38f6b3ec5f2eed'
+
+load_dotenv.load_dotenv()
+api_key = os.getenv('API_KEY')
 
 def kelvin_to_fahrenheit(kelvin_temp):
     return round((kelvin_temp - 273.15) * 9/5 + 32, 2)
